@@ -31,8 +31,8 @@ dev.new()
 #Bar Plot
 par(mfrow = c(4, 2), mar = c(4, 4, 2, 1))
 for (col in names(df)[-ncol(df)]) {
-  if (is.numeric(df[[col]])) {  # Memastikan hanya kolom numerik yang diproses
-    hist_data <- hist(df[[col]], breaks = 10, plot = FALSE)  # Menghitung histogram
+  if (is.numeric(df[[col]])) { 
+    hist_data <- hist(df[[col]], breaks = 10, plot = FALSE)
     barplot(hist_data$counts, 
             main = paste("Bar Plot of", col), 
             names.arg = round(hist_data$mids, 2), 
@@ -61,7 +61,7 @@ dev.new()
 if (!require(corrplot)) install.packages("corrplot")
 
 
-options(repr.plot.width=10, repr.plot.height=8)  # Menyesuaikan ukuran plot (dalam inci)
+options(repr.plot.width=10, repr.plot.height=8) 
 
 #Correlation
 num_cols <- df %>% select_if(is.numeric)
@@ -169,7 +169,7 @@ dev.new()
 # Scatter plot Actual vs Predicted
 ggplot(comparison_table, aes(x = Actual, y = Predicted)) +
   geom_point(color = "blue", alpha = 0.6) +
-  geom_jitter(width = 0.2, height = 0.2, color = "red") +  # Menambahkan sedikit jitter agar titik tidak tumpang tindih
+  geom_jitter(width = 0.2, height = 0.2, color = "red") + 
   labs(title = "Scatter Plot of Actual vs Predicted",
        x = "Actual Class",
        y = "Predicted Class") +
