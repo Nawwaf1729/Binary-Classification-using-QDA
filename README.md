@@ -1,5 +1,7 @@
 # Binary Classification using Quadratic Discriminant Analysis (QDA)
 
+Made by: Nawwaf Anshorulloh Supriyatna
+
 This repository provides an end-to-end implementation of **binary classification using Quadratic Discriminant Analysis (QDA)**. The project demonstrates how QDA can be utilized to separate two classes by modeling class-specific covariance structures and deriving non-linear decision boundaries.
 
 ---
